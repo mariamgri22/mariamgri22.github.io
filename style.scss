@@ -45,12 +45,16 @@ button {
   padding: 1em 0;
   border: none;
   color: $info-color;
+  background-color: $primary-color;
   width: 25%;
   cursor: pointer;
-  background-color: $primary-color;
+  position: relative;
+  overflow: hidden;
   a {
     text-decoration: none;
     color: $info-color;
+    position: relative;
+    z-index: 2;
   }
   @media (max-width: 768px) {
     width: 40%;
@@ -58,8 +62,7 @@ button {
   @media (max-width: 468px) {
     width: 80%;
   }
-  position: relative;
-  overflow: hidden;
+
   &:hover::after {
     content: "";
     position: absolute;

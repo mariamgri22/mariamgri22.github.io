@@ -378,14 +378,16 @@ button {
   padding: 1em 0;
   border: none;
   color: #FFFFFF;
+  background-color: #178A1F;
   width: 25%;
   cursor: pointer;
-  background-color: #178A1F;
   position: relative;
   overflow: hidden; }
   button a {
     text-decoration: none;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2; }
   @media (max-width: 768px) {
     button {
       width: 40%; } }
