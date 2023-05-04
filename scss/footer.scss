@@ -25,6 +25,10 @@ footer {
         text-decoration: none;
         margin: 0 1em;
         padding: 1.2rem 0;
+        cursor: default;
+        span {
+          cursor: pointer;
+        }
         @media screen and (max-width: 768px) {
           padding: 0.8rem 0;
         }

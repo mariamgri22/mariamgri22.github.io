@@ -1,5 +1,4 @@
 const bannerDescription = document.getElementById("banner-description");
-console.log("🚀 ~ file: srcipt.js:9 ~ bannerDescription:", bannerDescription);
 const text = bannerDescription.innerHTML;
 bannerDescription.innerHTML = "";
 

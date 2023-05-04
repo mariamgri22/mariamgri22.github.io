@@ -64,7 +64,6 @@ nav {
       nav .nav-links.active {
         right: 0;
         width: 100%;
-        /* justify-content: unset; */
         height: 20vh;
         top: 6vh; } }
 
@@ -180,30 +179,30 @@ main {
     margin: 0 auto;
     margin-top: 0.5rem;
     max-width: 800px; }
-  main .grid-item {
-    display: flex;
-    justify-content: center; }
-  main .card {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
-    width: 100%; }
-  main .card:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
-  main .card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px; }
-  main .card-description {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0;
-    color: #333333; }
+    main .grid-container .grid-item {
+      display: flex;
+      justify-content: center; }
+      main .grid-container .grid-item .card {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        transition: box-shadow 0.3s ease-in-out;
+        width: 100%; }
+        main .grid-container .grid-item .card:hover {
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+        main .grid-container .grid-item .card img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 20px; }
+        main .grid-container .grid-item .card .card-description {
+          font-size: 18px;
+          line-height: 1.5;
+          margin: 0;
+          color: #333333; }
   main .track {
     background-color: #262626;
     display: flex;
@@ -261,7 +260,10 @@ footer {
         color: #000000;
         text-decoration: none;
         margin: 0 1em;
-        padding: 1.2rem 0; }
+        padding: 1.2rem 0;
+        cursor: default; }
+        footer .container .links a span {
+          cursor: pointer; }
         @media screen and (max-width: 768px) {
           footer .container .links a {
             padding: 0.8rem 0; } }
@@ -334,6 +336,8 @@ footer {
       opacity: 0.3; }
     .main-conatiner .form-container textarea {
       height: 100px;
+      max-height: 300px;
+      resize: vertical;
       opacity: 0.3;
       border-width: 2px;
       border-color: #707070; }
@@ -376,7 +380,9 @@ button {
   color: #FFFFFF;
   width: 25%;
   cursor: pointer;
-  background-color: #178A1F; }
+  background-color: #178A1F;
+  position: relative;
+  overflow: hidden; }
   button a {
     text-decoration: none;
     color: #FFFFFF; }
@@ -386,3 +392,12 @@ button {
   @media (max-width: 468px) {
     button {
       width: 80%; } }
+  button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1; }
