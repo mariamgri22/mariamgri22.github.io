@@ -1,0 +1,58 @@
+.main-conatiner {
+  max-width: 1400px;
+  margin: 0 auto;
+  .download-title {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      color: #101010;
+      font-weight: 300;
+      font-size: 35px;
+      font-style: normal;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &.descrip {
+        font-size: 53px;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #707070;
+      opacity: 0.3;
+    }
+    textarea {
+      height: 100px;
+      opacity: 0.3;
+      border-width: 2px;
+      border-color: #707070;
+    }
+  }
+  @media (max-width: 468px) {
+    .submit {
+      width: 100%;
+    }
+  }
+}

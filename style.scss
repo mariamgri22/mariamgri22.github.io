@@ -1,0 +1,61 @@
+@import "colors";
+@import "variables";
+@import "./scss/header.scss";
+@import "./scss/home.scss";
+@import "./scss/adout.scss";
+@import "./scss/footer.scss";
+@import "./scss/form.scss";
+
+@font-face {
+  font-family: "myfont-regular";
+  src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "myfont-medium";
+  src: url("./fonts/OpenSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "myfont-light";
+  src: url("./fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "myfont-bold";
+  src: url("./fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "myfont-italic";
+  src: url("./fonts/OpenSans-Italic.ttf");
+  font-style: italic;
+}
+
+body {
+  font-family: $font-regular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0.5em 0;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  border: none;
+  color: $info-color;
+  width: 25%;
+  cursor: pointer;
+  background-color: $primary-color;
+  a {
+    text-decoration: none;
+    color: $info-color;
+  }
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+  @media (max-width: 468px) {
+    width: 80%;
+  }
+}
